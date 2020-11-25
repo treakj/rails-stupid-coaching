@@ -1,0 +1,23 @@
+<h1>Stupid Coaching</h1>
+<br>
+<br>
+<div class="card">
+  <p><strong><%= params[:ask] %></strong></p>
+  <p><i> -You</i></p>
+</div>
+<br>
+<br>
+
+<% if params[:ask] == "I am going to work"
+    answer = "Great!"
+  elsif params[:ask].include?('?') == true
+    answer = "Silly question, get dressed and go to work!" 
+  else
+    answer = "I don't care, get dressed and go to work!"
+  end
+  %>
+  <div class="card">
+    <p><strong><%= answer %></strong></p>
+    <p><i>Your coach</i></p>
+  </div>
+  
